@@ -53,6 +53,10 @@ All commands are run from the root of the project, from a terminal:
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
+## Domain
+
+The domain `is-a.dev` was graciously received from [is-a.dev](https://is-a.dev/).
+
 ## Links
 Deploying to GitHub Pages:
 https://docs.astro.build/en/guides/deploy/github/
