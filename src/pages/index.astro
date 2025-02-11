@@ -3,12 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import myPortrait from "../images/me.png"
 import { Image } from "astro:assets";
+import Header from '../components/Header.astro';
 ---
 
 <Layout title="Alex Ravenna">
 	<main>
 		<h1>
-			<span class="text-gradient">Alex Ravenna</span>
+			<Header text='Alex Ravenna' />
 			<br/>
 			<Image src={myPortrait} alt="A picture of the author of the website - a man." />
 		</h1>
@@ -57,13 +58,6 @@ import { Image } from "astro:assets";
 		line-height: 1.5;
 		margin: auto;
 		text-align: center;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
 	}
 	.instructions {
 		margin-bottom: 2rem;
