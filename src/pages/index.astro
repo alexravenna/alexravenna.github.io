@@ -8,11 +8,10 @@ import Header from '../components/Header.astro';
 
 <Layout title="Alex Ravenna">
 	<main>
-		<h1>
-			<Header text='Alex Ravenna' />
+		<Header text='Alex Ravenna'>
 			<br/>
 			<Image src={myPortrait} alt="A picture of the author of the website - a man." />
-		</h1>
+		</Header>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -52,13 +51,7 @@ import Header from '../components/Header.astro';
 		font-size: 20px;
 		line-height: 1.6;
 	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1.5;
-		margin: auto;
-		text-align: center;
-	}
+
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);

@@ -5,10 +5,19 @@ interface Props {
 
 const { text } = Astro.props;
 ---
-
-<span class="text-gradient">{text}</span>
+<h1>
+    <span class="text-gradient">{text}</span>
+    <slot />
+</h1>
 
 <style>
+    h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1.5;
+		margin: auto;
+		text-align: center;
+	}
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
