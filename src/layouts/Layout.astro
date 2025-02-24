@@ -21,8 +21,9 @@ const { title } = Astro.props;
 	<body>
 		<slot />
 	</body>
-	 <Footer></Footer>
+	<Footer></Footer>
 </html>
+
 <style is:global>
 	:root {
 		--accent: 255, 115, 0;
@@ -40,7 +41,7 @@ const { title } = Astro.props;
 		background: #272727;
 	}
 	footer {
-		color: rgb(var(--accent-light));
+		color: rgb(var(--accent));
 		text-align: center;
 	}
 </style>
