@@ -12,9 +12,8 @@ import Header from '../components/Header.astro';
 			<br/>
 			<Image src={myPortrait} alt="A picture of the author of the website - a man." />
 		</Header>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+		<p class="introduction">
+			Hello! I'm Alex Ravenna, a software engineer, father and husband. Welcome to my website.
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
@@ -51,24 +50,12 @@ import Header from '../components/Header.astro';
 		font-size: 20px;
 		line-height: 1.6;
 	}
-
-	.instructions {
+	.introduction {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		background: linear-gradient(rgba(var(--accent)), rgba(var(--accent), 33%));
 		padding: 1.5rem;
 		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
 	}
 	.link-card-grid {
 		display: grid;
