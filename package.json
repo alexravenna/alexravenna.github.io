@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/svelte": "^7.0.11",
-    "astro": "^5.7.7",
+    "@astrojs/svelte": "^7.0.13",
+    "astro": "^5.7.10",
     "devicons-astro": "^0.4.0",
     "svelte": "^5.28.2",
     "typescript": "^5.8.3"
