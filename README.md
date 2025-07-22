@@ -3,8 +3,9 @@
 My personal website.
 
 Built with:
-- [Astro](https://astro.build/)
 
+- [Astro](https://astro.build/)
+- [devicons-astro](https://github.com/jpal91/devicons-astro)
 
 ## Development
 
