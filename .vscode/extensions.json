@@ -1,7 +1,4 @@
 {
-  "recommendations": [
-    "trunk.io",
-    "svelte.svelte-vscode"
-  ],
+  "recommendations": ["trunk.io", "svelte.svelte-vscode"],
   "unwantedRecommendations": []
 }

@@ -21,5 +21,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
 ## Additional Links
+
 Deploying to GitHub Pages:
 https://docs.astro.build/en/guides/deploy/github/
