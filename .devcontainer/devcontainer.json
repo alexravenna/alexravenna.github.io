@@ -10,7 +10,12 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": ["trunk.io", "svelte.svelte-vscode", "astro-build.astro-vscode"]
+      "extensions": [
+        "trunk.io",
+        "svelte.svelte-vscode",
+        "astro-build.astro-vscode",
+        "esbenp.prettier-vscode"
+      ]
     }
   }
 
