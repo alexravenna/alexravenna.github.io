@@ -1,8 +1,22 @@
 ---
 import Header from "../components/Header.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Projects">
   <Header text="Projects" />
+  <ul role="list" class="project-card-grid">
+    <ProjectCard title="Personal Website" description="This website!" />
+    <ProjectCard title="Dimmed+Vibrant" description="A VS Code theme." />
+  </ul>
 </Layout>
+
+<style>
+  .project-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>
