@@ -1,24 +1,25 @@
 ---
 interface Props {
-    text: string;
+  text: string;
 }
 
 const { text } = Astro.props;
 ---
+
 <h1>
-    <span class="text-gradient">{text}</span>
-    <slot />
-    <!-- TODO: badges go here -->
+  <span class="text-gradient">{text}</span>
+  <slot />
+  <!-- TODO: badges go here -->
 </h1>
 
 <style>
-    h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1.5;
-		margin: auto;
-		text-align: center;
-	}
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: auto;
+    text-align: center;
+  }
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;

@@ -1,56 +1,48 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import myPortrait from "../images/me.png"
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import myPortrait from "../images/me.png";
 import { Image } from "astro:assets";
-import Header from '../components/Header.astro';
+import Header from "../components/Header.astro";
 ---
 
 <Layout title="Alex Ravenna">
-	<main>
-		<Header text='Alex Ravenna'>
-			<br/>
-			<Image src={myPortrait} alt="A picture of the author of the website - a man." />
-		</Header>
-		<p class="introduction">
-			Hello! I'm Alex Ravenna, a software engineer, father and husband. Welcome to my website.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="/about"
-				title="About Me"
-				body="Learn about me."
-			/>
-			<Card
-				href="/projects"
-				title="Projects"
-				body="What I'm working on."
-			/>
-		</ul>
-	</main>
+  <main>
+    <Header text="Alex Ravenna">
+      <br />
+      <Image src={myPortrait} alt="A picture of the author of the website - a man." />
+    </Header>
+    <p class="introduction">
+      Hello! I'm Alex Ravenna, a software engineer, father and husband. Welcome to my website.
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card href="/about" title="About Me" body="Learn about me." />
+      <Card href="/projects" title="Projects" body="What I'm working on." />
+    </ul>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.introduction {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent)), rgba(var(--accent), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .introduction {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(rgba(var(--accent)), rgba(var(--accent), 33%));
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
 </style>
