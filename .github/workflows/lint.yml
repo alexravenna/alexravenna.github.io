@@ -1,0 +1,21 @@
+name: Lint
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      - name: Run Lint
+        uses: trunk-io/trunk-action@v1
+        with:
+          post-annotations: true
