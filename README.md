@@ -1,4 +1,4 @@
-# alexravenna.github.io
+# alexravenna.is-a.dev
 
 My personal website.
 
@@ -6,6 +6,10 @@ Built with:
 
 - [Astro](https://astro.build/)
 - [devicons-astro](https://github.com/jpal91/devicons-astro)
+
+## Domain
+
+The domain `is-a.dev` was graciously received from [is-a.dev](https://is-a.dev/).
 
 ## Development
 
