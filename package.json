@@ -14,7 +14,7 @@
     "@astrojs/svelte": "^7.2.0",
     "astro": "^5.14.4",
     "devicons-astro": "^0.4.0",
-    "svelte": "^5.39.11",
+    "svelte": "^5.41.1",
     "typescript": "^5.9.3"
   }
 }
