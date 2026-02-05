@@ -1,8 +1,8 @@
 ---
 avatarImage:
-  src: './avatar.jpg'
-  alt: 'My avatar'
-githubCalendar: 'stelcodes'
+  src: './me.jpg'
+  alt: 'The author of the website - a man.'
+githubCalendar: 'alexravenna'
 ---
 
-Welcome to the example site. This site is meant to show off my custom Astro theme/template **MultiTerm** which creates a coder-ready blog complete with an interactive theme changer, RSS, sitemap, tagging, and markdown extensions.
+Hello! I'm Alex Ravenna, a software engineer, father and husband. Welcome to my website.
