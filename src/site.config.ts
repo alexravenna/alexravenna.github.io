@@ -33,11 +33,11 @@ const config: SiteConfig = {
       url: '/',
     },
     {
-      name: 'About',
+      name: 'About Me',
       url: '/about',
     },
     {
-      name: 'Archive',
+      name: 'Posts',
       url: '/posts',
     },
     {
