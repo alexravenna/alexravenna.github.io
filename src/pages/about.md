@@ -10,8 +10,14 @@ eventually discovered that my passion lies with understanding how software works
 creating it myself.
 
 Since I made the switch to professional software development in 2016 I have had a career
-spanning multiple industries, technologies and company cultures.
+spanning multiple industries, technologies and company cultures and I haven't regretted 
+the career switch for a single second.
 
-I believe that in order to be a successful software engineer, you should practice lifelong learning and open-mindedness.
+## Values
 
-For me, the best way to work is iteratively but with a vision.
+I believe that in order to be a successful software engineer, the following characteristics are important:
+
+- continuous learning
+- curiosity
+- open-mindedness
+- working iteratively but with a vision
