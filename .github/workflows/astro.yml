@@ -67,15 +67,13 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-        working-directory: ${{ env.BUILD_PATH }}
-
-      - name: Build with Astro
-        run: |
-          ${{ steps.detect-package-manager.outputs.runner }} astro build \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+      - name: Install, build, and upload your site
+        uses: withastro/action@v5
+        # with:
+            # path: . # The root location of your Astro project inside the repository. (optional)
+            # node-version: 22 # The specific version of Node that should be used to build your site. Defaults to 22. (optional)
+            # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+            # build-cmd: pnpm run build # The command to run to build your site. Runs the package build script/task by default. (optional)
 
       - name: Build Pagefind Index
         run: |
