@@ -6,8 +6,6 @@ description: 'Learn how to use first-party libraries in your Aspire AppHost.'
 tags: ['aspire', 'dotnet', 'csharp', 'TIL']
 ---
 
-Let's start this off.
-
 ```csharp
 public class MyLook {
 
