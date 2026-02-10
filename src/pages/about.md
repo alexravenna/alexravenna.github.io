@@ -20,4 +20,5 @@ I believe that in order to be a successful software engineer, the following char
 - continuous learning
 - curiosity
 - open-mindedness
+- trying new things
 - working iteratively but with a vision
