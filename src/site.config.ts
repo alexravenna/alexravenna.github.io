@@ -41,6 +41,14 @@ const config: SiteConfig = {
       url: '/posts',
     },
     {
+      name: 'Projects',
+      url: '/projects',
+    },
+    {
+      name: 'Tech Stack',
+      url: '/tech-stack',
+    },
+    {
       name: 'GitHub',
       url: 'https://github.com/alexravenna',
       external: true,
