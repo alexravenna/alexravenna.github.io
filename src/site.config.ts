@@ -2,7 +2,7 @@ import type { SiteConfig } from '~/types'
 
 const config: SiteConfig = {
   // Absolute URL to the root of your published site, used for generating links and sitemaps.
-  site: 'https://alexravenna.github.io/site',
+  site: 'https://alexravenna.is-a.dev',
   // The name of your site, used in the title and for SEO.
   title: 'Eventually Consistent',
   // The description of your site, used for SEO and RSS feed.
@@ -42,7 +42,7 @@ const config: SiteConfig = {
     },
     {
       name: 'GitHub',
-      url: 'https://github.com/alexravenna/site',
+      url: 'https://github.com/alexravenna',
       external: true,
     },
   ],
