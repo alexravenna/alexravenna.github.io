@@ -15,10 +15,9 @@ the career switch for a single second.
 
 ## Values
 
-I believe that in order to be a successful software engineer, the following characteristics are important:
+I believe that in order to be a successful software developer, the following characteristics are important:
 
 - continuous learning
-- curiosity
-- open-mindedness
-- trying new things
+- curiosity and trying new things
+- open-mindedness to the ideas of others
 - working iteratively but with a vision
