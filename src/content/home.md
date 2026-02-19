@@ -5,4 +5,4 @@ avatarImage:
 githubCalendar: 'alexravenna'
 ---
 
-Hello! I'm Alex Ravenna, a software engineer, father and husband. Welcome to my website.
+Hello! I'm Alex Ravenna, a software developer, father and husband. Welcome to my website.
