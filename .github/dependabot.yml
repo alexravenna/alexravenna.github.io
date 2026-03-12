@@ -10,3 +10,33 @@ updates:
    directory: "/"
    schedule:
      interval: weekly
+ - package-ecosystem: "npm"
+   directory: "/"
+   schedule:
+     interval: weekly
+   groups:
+     npm-dev-patch-minor:
+       dependency-type: "development"
+       patterns:
+         - "*"
+       update-types:
+         - "minor"
+         - "patch"
+     npm-prod-patch-minor:
+       dependency-type: "production"
+       patterns:
+         - "*"
+       update-types:
+         - "minor"
+         - "patch"
+ - package-ecosystem: "github-actions"
+   directory: "/"
+   schedule:
+     interval: weekly
+   groups:
+     github-actions-patch-minor:
+       patterns:
+         - "*"
+       update-types:
+         - "minor"
+         - "patch"
