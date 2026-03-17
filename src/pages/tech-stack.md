@@ -21,13 +21,13 @@ title: Tech Stack
 - SQL Server Management Studio 22
 - GitHub Copilot
 - Postman
-
-### Supporting Tools
-
 - Azure DevOps
   - Repos
   - Pipelines/Releases
-- Jira
+
+### Supporting Tools
+
+-  Jira
 - Confluence
 
 ---
