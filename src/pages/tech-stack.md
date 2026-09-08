@@ -2,52 +2,52 @@
 layout: '~/layouts/MarkdownLayout.astro'
 title: Tech Stack
 ---
-## Professionally
 
-### Programming Languages and Frameworks
+## Programming Languages and Frameworks
 
 - .NET (8+)
   - ASP.NET Core
   - Entity Framework Core
-- TypeScript
+  - xUnit
 - Aspire
-- Docker
-
-### Development Tools
-
-- Git
-- Visual Studio 2026 Enterprise Edition (Insiders)
-- Visual Studio Code
-- SQL Server Management Studio 22
-- GitHub Copilot
-- Postman
-- Azure DevOps
-  - Repos
-  - Pipelines/Releases
-
-### Supporting Tools
-
--  Jira
-- Confluence
-
----
-
-## Privately
-
-### Programming Languages and Frameworks
-
-- .NET (8+)
 - TypeScript
 - Astro
 
-### Development Tools
+## Cloud Platforms and Infrastructure
+
+- Docker
+- Azure
+  - AD B2C
+  - API Management
+  - Application Insights
+  - Container Apps
+  - Functions
+  - Key Vault
+  - Service Bus
+  - Storage Accounts
+- RabbitMQ
+- SQL Server
+
+## Development Tools
 
 - Git
-- Visual Studio 2026
-- Visual Studio Code Insiders
+- Visual Studio 2026 Standard/Professional/Enterprise Edition (Insiders)
+- Visual Studio Code (Insiders)
+- SQL Server Management Studio 22
+- Postman/Insomnia
+- Azure DevOps
+  - Repos
+  - Pipelines/Releases
 - GitHub
+  - Copilot CLI
+  - Copilot App
   - Actions
   - Codespaces
-  - Copilot
+- Devcontainers
+- Windows Terminal/Intelligent Terminal
 
-### Supporting Tools
+## Supporting Tools
+
+- Jira
+- Confluence
+- Miro
