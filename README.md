@@ -7,7 +7,6 @@ Welcome to my code behind my personal website! 🙋‍♂️ The website itself 
 
 - [alexravenna.site](https://alexravenna.site)
 - [alexravenna.com](https://alexravenna.com)
-- [alexravenna.de](https://alexravenna.de) (Because I live in Germany)
 - [alexravenna.github.io](https://alexravenna.github.io)
 - [alexravenna.is-a.dev](https://alexravenna.is-a.dev) (The address all of the above redirect to)
 
