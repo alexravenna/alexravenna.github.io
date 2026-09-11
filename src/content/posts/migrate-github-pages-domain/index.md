@@ -52,26 +52,37 @@ However, in order to make "alexravenna.is-a.dev" be the final destination for "a
 
 ## Original Redirect
 
-Here's the current redirect configuration in my domain provider:
+Here's the original redirect configured in my domain provider:
+
 ![Permanent domain redirect configuration from alexravenna.com to https://alexravenna.is-a.dev](redirect-configuration.png)
 
-This means that if you input "alexravenna.com" into your browser, your browser will always automatically take you to "https://alexravenna.is-a.dev" without you having to do anything.
+If this were active, this would mean that inputting "alexravenna.com" into your browser, would always automatically take you to "https://alexravenna.is-a.dev" without you having to do anything.
 
 ## Migrating Domains
 
-When this post goes live, you should always find it at this final URL
+When this post goes live, you should always be redirected to this final URL
 
 ```
 http://alexravenna.com/posts/migrate-github-pages-domain
 ```
 
-and not at 
+and not to
 
 ```
 http://alexravenna.is-a.dev/posts/migrate-github-pages-domain
 ```
 
 How did I achieve that?
+
+1. First, I removed the redirect configuration from my domain provider (see the screenshot above). They informed me:
+![A notice from the domain provider stating "The redirect usually takes 1 hour to work. Sometimes, it can take up to 48 hours."](redirect-deletion-notice.png)
+
+2. Next, I updated the GitHub Pages setting for the code repository. That's where you have to tell GitHub that you're using a custom domain instead of the default <GITHUB-USERNAME>-github.io domain.
+The previous configuration for the alexravenna.is-a.dev custom domain looked like this:
+![GitHub Pages domain configuration for alexravenna.is-a.dev](github-pages-configuration-orig.png)
+I changed it to be:
+![GitHub Pages domain configuration for alexravenna.is-a.dev](github-pages-configuration-new.png)
+GitHub does a DNS check after you save to make sure the new doman can be resolved.
 
 ## Resources:
 
