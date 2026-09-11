@@ -175,7 +175,7 @@ At long last, it was successful!
 
 ![Screenshot showing GitHub Pages settings with successful DNS check but no HTTPS possible](github-pages-configuration-dns-check-successful.png)
 
-However, HTTPS enforcement wasn't possible for some reason, which is nowadays a big no-go. Hm. Well, the documentation does say that it may take some time for a certificate to be generated after DNS updates...
+However, HTTPS enforcement wasn't possible for some reason, which is nowadays a big no-go. Hm. Well, the GitHub Pages documentation does say that it may take up to 24 hours for the HTTPS enforcement option to be available...I'll give it some time.
 
 ## Conclusion
 
