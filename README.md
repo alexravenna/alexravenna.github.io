@@ -5,11 +5,13 @@
 
 Welcome to the code behind my personal website! 🙋‍♂️ The website itself can be reached at the following addresses:
 
-- [alexravenna.com](https://alexravenna.com)
+- [alexravenna.com](https://alexravenna.com) (The address all of the below redirect to)
 - [alexravenna.github.io](https://alexravenna.github.io)
-- [alexravenna.is-a.dev](https://alexravenna.is-a.dev) (The address all of the above redirect to)
+- [alexravenna.is-a.dev](https://alexravenna.is-a.dev) (See [is-a.dev](https://is-a.dev))
 
 This is a fork of the wonderful [MultiTerm Astro](https://github.com/stelcodes/multiterm-astro) project. It currently has no added features and the changes to the code are all content-, infrastructure- or dependency-related. At some point that may change!
+
+This website is hosted on [GitHub Pages](https://docs.github.com/en/pages), hence the [alexravenna.github.io](https://alexravenna.github.io) URL above.
 
 ## 📄 License
 
