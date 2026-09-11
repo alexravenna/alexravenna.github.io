@@ -1,28 +1,30 @@
 ---
-title: 'Migrating the domain for GitHub Pages'
+title: 'Migrating the Domain for GitHub Pages'
 published: 2026-09-11
 draft: true
 description: 'How to change the domain of your GitHub Pages website.'
 tags: ['github', 'github-pages', 'domain', 'dns', 'cname']
 ---
 
-I recently decided to use switch to alexravenna.com as the canonical domain name for my website.
+## Introduction
+
+I recently decided to switch to alexravenna.com as the canonical domain for my website.
 
 I already own the domain (woohoo!), but for some reason had originally decided to have alexravenna.is-a.dev be the default domain for this site.
 
-# Terminology
+## Terminology
 
-First, let's take a quick refresher on the terms behind a URL like https://alexravenna.github.io:
+First, let's take a quick refresher on the terms behind a URL like https://alexravenna.github.io to avoid confusion later:
 
-|URL Section|Term|Meaning|
-|-|-|-|
-|https|scheme||
-|alexravenna|subdomain label||
-|alexravenna.github.io|subdomain||
-|github.io|apex domain||
-|io|top-level domain (TLD)||
+|URL Section|Term|
+|-|-|
+|https|scheme|
+|alexravenna|subdomain label|
+|alexravenna.github.io|subdomain|
+|github.io|apex domain|
+|io|top-level domain (TLD)|
 
-# GitHub Pages Default Domain Name
+## GitHub Pages Default Domain Name
 
 This website is hosted on [GitHub Pages](https://docs.github.com/en/pages), which automatically gives it the domain [alexravenna.github.io](https://alexravenna.github.io). That domain comes from my GitHub username, "alexravenna".
 
@@ -32,11 +34,11 @@ As described in [the documentation](https://docs.github.com/en/pages/getting-sta
 <GITHUB-USERNAME>.github.io
 ```
 
-for example: [alexravenna.github.io](https://github.com/alexravenna/alexravenna.github.io) (click to be taken to the repository).
+for example: [alexravenna.github.io](https://github.com/alexravenna/alexravenna.github.io) (click to be taken to the repository). You can only create one such GitHub Pages website per GitHub username.
 
 I thought that alexravenna.github.io was too boring, so I decided I'd rather use a custom domain!
 
-# Custom .is-a.dev Subdomain
+## Custom .is-a.dev Subdomain
 
 I stumbled upon the [is-a.dev project](https://is-a.dev) at some point, which allows anyone to create a custom subdomain under the "is-a.dev" apex domain for free. Since I'm a software **dev**eloper, that appealed to me!
 
@@ -48,30 +50,30 @@ That means that if you follow the [registration process for GitHub Pages ](https
 
 However, in order to make "alexravenna.is-a.dev" be the final destination for "alexravenna.com" too, it was necessary to configure a redirect.
 
-# Original Redirect
+## Original Redirect
 
 Here's the current redirect configuration in my domain provider:
 ![Permanent domain redirect configuration from alexravenna.com to https://alexravenna.is-a.dev](redirect-configuration.png)
 
 This means that if you input "alexravenna.com" into your browser, your browser will always automatically take you to "https://alexravenna.is-a.dev" without you having to do anything.
 
-# Migrating Domains
+## Migrating Domains
 
 When this post goes live, you should always find it at this final URL
 
 ```
-http://alexravenna.com/posts/migrate-github-pages-host
+http://alexravenna.com/posts/migrate-github-pages-domain
 ```
 
 and not at 
 
 ```
-http://alexravenna.is-a.dev/posts/migrate-github-pages-host
+http://alexravenna.is-a.dev/posts/migrate-github-pages-domain
 ```
 
 How did I achieve that?
 
-# Resources:
+## Resources:
 
 - [GitHub Pages documentation](https://docs.github.com/en/pages)
   - [About custom domains and GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
