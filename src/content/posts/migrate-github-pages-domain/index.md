@@ -1,8 +1,8 @@
 ---
 title: 'Migrating a Custom Domain for GitHub Pages'
 published: 2026-09-11
-lastUpdated: 2026-09-11
-description: 'How to change the domain of your GitHub Pages website.'
+lastUpdated: 2026-09-12
+description: 'How to change from one the domain of your GitHub Pages website.'
 tags: ['github', 'github-pages', 'domain', 'dns', 'cname', 'behind-the-scenes', 'is-a.dev']
 ---
 
@@ -176,6 +176,17 @@ At long last, it was successful!
 ![Screenshot showing GitHub Pages settings with successful DNS check but no HTTPS possible](github-pages-configuration-dns-check-successful.png)
 
 However, HTTPS enforcement wasn't possible for some reason, which is nowadays a big no-go. Hm. Well, the GitHub Pages documentation does say that it may take up to 24 hours for the HTTPS enforcement option to be available...I'll give it some time.
+
+
+## Update #3: Good Things Come to Those Who Wait
+
+When I checked four hours later, things looked much better! DNS propagation according to whatsmydns.net was almost fully complete (two locations were red, but no locations still showed the Hostinger IP address):
+
+![Screenshot showing uniform whatsmydns.net results](whatsmydns-alexravenna-later.png)
+
+And GitHub Pages allowed me to enforce HTTPS:
+
+![Screenshot showing a GitHub Pages settings with "Enforce HTTPS" activated](github-pages-configuration-enforce-https.png)
 
 ## Conclusion
 
