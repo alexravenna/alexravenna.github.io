@@ -118,10 +118,10 @@ Then you are asked to make some changes in your DNS configuration:
 
 ![Screenshot showing steps for adding a DNS TXT record](github-settings-pages-dns-txt-record.png)
 
-These steps are:
+These steps are (ignore the red redaction I made, these values are published publically, I just didn't know that at the time):
 
-1. Create a TXT record in your DNS configuration for the following hostname: `<REDACTED>`.alexravenna.com
-2. Use this code for the value of the TXT record: `<REDACTED>`
+1. Create a TXT record in your DNS configuration for the following hostname: `_github-pages-challenge-alexravenna`.alexravenna.com
+2. Use this code for the value of the TXT record: `f7ab6bae7659743478f7ab26089473`
 3. Wait until your DNS configuration changes. This could take up to 24 hours to propagate.
 
 ### Create DNS TXT Record
@@ -137,6 +137,37 @@ I entered the values as provided by GitHub and added the record:
 I went back over to GitHub and clicked "Verify" and was thankfully greeted with a successful notification:
 
 ![Screenshot showing that alexravenna.com was successfully verified](github-settings-pages-verification-successful.png)
+
+But still no luck! The "parked domain page" still showed for `alexravenna.com` and GitHub Pages still gave me the same error.
+
+### Update Additional DNS Records
+
+After doing some research I came back smarter. The problem was with the DNS records still present with my domain provider:
+
+![Screenshot showing DNS records at the domain provider](domain-provider-dns-records.png)
+
+These two `A` and `AAAA` records point DNS to the IPv4 and IPv6 addresses of my domain provider, Hostinger. That's why navigating to `alexravenna.com` currently loads the "parked domain page" from them. A DNS lookup at [whatsmydns.net](https://www.whatsmydns.net/#A/alexravenna.com) confirmed that `alexravenna.com` only points to Hostinger, _not_ GitHub Pages.
+
+I had to tell Hostinger to forward requests to `alexravenna.com` to the GitHub IP addresses as described at [Configuring an apex domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain):
+
+- 185.199.108.153
+- 185.199.109.153
+- 185.199.110.153
+- 185.199.111.153
+
+This sounds like it will work! So I deleted the A and AAAA records for Hostinger and added the A records for GitHub Pages:
+
+![Screenshot showing multiple DNS records](domain-provider-dns-additional-records.png)
+
+Maybe I'll add the AAAA (IPv6) records at some point, but I don't think those will matter for awhile.
+
+### DNS Propagation
+
+I new check of whatsmydns.net showed me that DNS propagation was already taking place and resolving the GitHub Pages IP addresses instead of Hostinger's:
+
+![Screenshot showing whatsmydns.net results for alexravenna.com A record](whatsmydns-alexravenna.png)
+
+It can only be a matter of time!
 
 ## Conclusion
 
