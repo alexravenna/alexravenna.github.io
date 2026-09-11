@@ -80,9 +80,9 @@ How did I achieve that?
 2. Next, I updated the GitHub Pages setting for the code repository. That's where you have to tell GitHub that you're using a custom domain instead of the default <GITHUB-USERNAME>-github.io domain.
 The previous configuration for the alexravenna.is-a.dev custom domain looked like this:
 ![GitHub Pages domain configuration for alexravenna.is-a.dev](github-pages-configuration-orig.png)
-I changed it to be:
+I changed the entry under "Custom domain" to alexravenna.com:
 ![GitHub Pages domain configuration for alexravenna.is-a.dev](github-pages-configuration-new.png)
-GitHub does a DNS check after you save to make sure the new doman can be resolved.
+GitHub does a DNS check after you save to make sure the new domain can be resolved.
 
 ## Resources:
 
