@@ -140,7 +140,7 @@ I went back over to GitHub and clicked "Verify" and was thankfully greeted with 
 
 But still no luck! The "parked domain page" still showed for `alexravenna.com` and GitHub Pages still gave me the same error.
 
-### Update Additional DNS Records
+## Update #2: Update Additional DNS Records
 
 After doing some research I came back smarter. The problem was with the DNS records still present with my domain provider:
 
@@ -167,7 +167,15 @@ I new check of whatsmydns.net showed me that DNS propagation was already taking 
 
 ![Screenshot showing whatsmydns.net results for alexravenna.com A record](whatsmydns-alexravenna.png)
 
-It can only be a matter of time!
+It can only be a matter of time! GitHub showed me for a long time that the DNS check was in progress, which made me somewhat anxious:
+
+![Screenshot showing GitHub Pages settings that "DNS Check in Progress"](github-pages-configuration-dns-check-in-progress.png)
+
+At long last, it was successful!
+
+![Screenshot showing GitHub Pages settings with successful DNS check but no HTTPS possible](github-pages-configuration-dns-check-successful.png)
+
+However, HTTPS enforcement wasn't possible for some reason, which is nowadays a big no-go. Hm. Well, the documentation does say that it may take some time for a certificate to be generated after DNS updates...
 
 ## Conclusion
 
