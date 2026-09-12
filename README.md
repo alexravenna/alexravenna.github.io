@@ -7,7 +7,7 @@ Welcome to the code behind my personal website! 🙋‍♂️ The website itself
 
 - [alexravenna.com](https://alexravenna.com) (The address all of the below redirect to)
 - [alexravenna.github.io](https://alexravenna.github.io)
-- [alexravenna.is-a.dev](https://alexravenna.is-a.dev) (See [is-a.dev](https://is-a.dev))
+- ~~[alexravenna.is-a.dev](https://alexravenna.is-a.dev) (See [is-a.dev](https://is-a.dev))~~ I still have to re-configure this after [migrating to a different custom domain](/src/content/posts/migrate-github-pages-domain/index.md)
 
 This is a fork of the wonderful [MultiTerm Astro](https://github.com/stelcodes/multiterm-astro) project. It currently has no added features and the changes to the code are all content-, infrastructure- or dependency-related. At some point that may change!
 
