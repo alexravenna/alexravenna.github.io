@@ -11,7 +11,7 @@ creating it myself.
 
 Since I made the switch to professional software development in 2016 I have had a career
 spanning multiple industries, technologies and company cultures and I haven't regretted 
-the career switch for a single second.
+the career shift for a single second.
 
 ## Personal Characteristics
 
@@ -20,6 +20,7 @@ Some things to know about me:
 - I am more of an expert generalist than a specialist in any one field
 - I like to consider strategic (high-level design) software development more than the tactical (low-level details)
 - I prefer simplicity first and right-sizing solutions: not over-engineered and not quick-and-dirty
+- I think it's more important to set standards and conventions early on - even if they're not perfect - than to spend a long time discussing and not implementing them 
 
 ## Values
 
@@ -29,4 +30,4 @@ I believe that in order to be a successful software developer, the following cha
 - curiosity and trying new things
 - open-mindedness to the ideas of others
 - working iteratively but with a vision
-- empathic (or at least not condescending) communication
+- empathic (or at least never condescending) communication
