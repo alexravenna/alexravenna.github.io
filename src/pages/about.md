@@ -34,6 +34,10 @@ I believe that in order to be a successful software developer, the following cha
 
 ## Certifications
 
-- Microsoft: Azure Fundamentals (AZ-900) - 14.09.2026
-![alt text](https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg)
-    - [Link](https://learn.microsoft.com/en-us/users/alexravenna/credentials/8bddfabe0c88c36f)
+### Microsoft Certified: Azure Fundamentals
+<img
+    src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg"
+    alt="Microsoft Certified Fundamentals badge"
+    width="100"
+    /> 
+[Link](https://learn.microsoft.com/en-us/users/alexravenna/credentials/8bddfabe0c88c36f)
