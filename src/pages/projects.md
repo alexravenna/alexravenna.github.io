@@ -6,7 +6,7 @@ title: Projects
 
 A dark color theme for VS Code and Open VSX with subdued grays for backgrounds and vibrant text coloring.
 
-![Screenshot of my VS Code color theme](https://github.com/alexravenna/vscode-dimmed-vibrant/blob/main/screenshot.png)
+![Screenshot of my VS Code color theme](/images/dimmed-vibrant-screenshot.png 'Dimmed+Vibrant in the classic VS Code editor')
 
 [GitHub repo](https://github.com/alexravenna/vscode-dimmed-vibrant)
 
