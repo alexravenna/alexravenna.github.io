@@ -57,7 +57,7 @@
     "pagefind": "^1.5.2",
     "prettier": "3.9.6",
     "prettier-plugin-astro": "0.14.1",
-    "sass-embedded": "^1.104.0",
+    "sass-embedded": "^1.104.1",
     "typescript": "^7.0.2"
   }
 }
