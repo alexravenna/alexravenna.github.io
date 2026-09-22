@@ -10,8 +10,11 @@ title: Tech Stack
   - Entity Framework Core
   - xUnit
 - Aspire
+- Protobuf
 - TypeScript
 - Astro
+
+Previously: C++, Web (Vue, CSS, HTML, Jest, Cypress) Java (Maven, Ant), Python, Bash, Perl
 
 ## Cloud Platforms and Infrastructure
 
@@ -27,6 +30,7 @@ title: Tech Stack
   - Storage Accounts
 - RabbitMQ
 - SQL Server
+- Linux (Ubuntu primarily)
 
 ## Development Tools
 
@@ -43,11 +47,16 @@ title: Tech Stack
   - Copilot App
   - Actions
   - Codespaces
+- SonarQube
 - Devcontainers
 - Windows Terminal/Intelligent Terminal
+
+Previously: Jetbrains IDEs (Intellij IDEA, PyCharm), Artifactory, Eclipse, Subversion
 
 ## Supporting Tools
 
 - Jira
 - Confluence
 - Miro
+
+Previously: Azure Boards
