@@ -48,6 +48,7 @@ Previously: C++, Web (Vue, CSS, HTML, Jest, Cypress) Java (Maven, Ant), Python, 
   - Actions
   - Codespaces
 - SonarQube
+- GitLab
 - Devcontainers
 - Windows Terminal/Intelligent Terminal
 
