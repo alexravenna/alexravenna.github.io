@@ -18,7 +18,7 @@ the career shift for a single second.
 Some things to know about me:
 
 - I am more of an expert generalist than a specialist in any one field
-- I like to consider strategic (high-level design) software development more than the tactical (low-level details)
+- I always consider the end user of my work, whether it's another developer or a customer
 - I prefer simplicity first and right-sizing solutions: not over-engineered and not quick-and-dirty
 - I think it's more important to set standards and conventions early on - even if they're not perfect - than to spend a long time discussing and not implementing them 
 
