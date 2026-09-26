@@ -42,12 +42,13 @@ Simon Cropp is a prolific author of tools in the .NET scene, just see his [GitHu
 
 ### Enabling Development
 
-I typically edit this blog in a Devcontainer (link), so I needed .NET to be availble in the Devcontainer so I could start the blog with MarkdownSnippets during development.
+I typically edit this blog in a Devcontainer (link), so I needed .NET to be available in the Devcontainer so I could start the blog with MarkdownSnippets during development.
 
 ### To the Blog
 
 ### To GitHub Actions
 
+Since the GitHub Action for building and deploying this site was only designed for building the Astro site, I had to add .NET to the mix in order for the Markdown snippets to actually be transformed during the website build.
 
 ## Resources
 
