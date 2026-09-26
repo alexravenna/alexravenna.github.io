@@ -42,7 +42,9 @@ Simon Cropp is a prolific author of tools in the .NET scene, just see his [GitHu
 
 ### Enabling Development
 
-I typically edit this blog in a Devcontainer (link), so I needed .NET to be available in the Devcontainer so I could start the blog with MarkdownSnippets during development.
+I typically edit this blog in a [Devcontainer](link) so that I don't need to have Node.js and a package manager (npm/pnpm/yarn) always installed on whichever machine I'm currently on - or maybe I'm even using a [Codespace](link), which use can use Devcontainer configurations out-of-the-box!
+
+Anyway, that means I needed .NET to be available in the Devcontainer so I could start the blog with MarkdownSnippets during development.
 
 ### To the Blog
 
