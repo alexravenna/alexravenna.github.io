@@ -55,7 +55,7 @@ Console.WriteLine("Hello, Again!");
 // end-snippet
 ```
 
-Note: I couldn't find a way to exclude individual `snippet`s from being substituted, which makes it a bit difficult to describe them.
+Note: I couldn't find a way to exclude individual `snippet`s from being substituted, which makes it a bit difficult to describe them without them being processed by the tool!
 
 The behavior of MarkdownSnippets is configured through a `mdsnippets.json` file; see mine here: [mdsnippets.json](https://github.com/alexravenna/alexravenna.github.io/blob/main/mdsnippets.json). At its most basic configuration, MarkdownSnippets scans all files (with some default [exclusions](https://github.com/SimonCropp/MarkdownSnippets/blob/main/docs/exclusion.md)) for these comments and substitutes the content them into any Markdown or MDX file that contains the same key.
 
@@ -63,9 +63,20 @@ The behavior of MarkdownSnippets is configured through a `mdsnippets.json` file;
 
 ### Enabling Development
 
-I typically edit this blog in a [Devcontainer](link) so that I don't need to have Node.js and a package manager (npm/pnpm/yarn) always installed on whichever machine I'm currently on - or maybe I'm even using a [Codespace](link), which use can use Devcontainer configurations out-of-the-box!
+I typically edit this blog in a [dev container](link) so that I don't need to have Node.js and a package manager (npm/pnpm/yarn) always installed on whichever machine I'm currently on - or maybe I'm even using a [Codespace](link), which use can use dev container configurations out-of-the-box!
 
-Anyway, that means I needed .NET to be available in the Devcontainer so I could start the blog with MarkdownSnippets during development.
+Anyway, that means I needed .NET to be available in the dev container so I could start the blog with MarkdownSnippets during development. The dev container image I use, [devcontainers/typescript-node](https://hub.docker.com/r/microsoft/devcontainers-typescript-node), only includes Node.js as a runtime, and nothing related to .NET is included.
+
+Since the main purpose of this dev container is to build and run the website, I didn't want to change the image so I made use of dev container [features](https://containers.dev/features) to include the .NET SDK and CLI by adding this to the `devcontainer.json`:
+
+```json
+	"features": {
+		"ghcr.io/devcontainers/features/dotnet:2": {
+			"version": "10.0",
+			"dotnetRuntimeVersions": "10.0"
+		}
+	}
+```
 
 ### To the Blog
 
