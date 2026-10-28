@@ -67,20 +67,25 @@ I typically edit this blog in a [dev container](link) so that I don't need to ha
 
 Anyway, that means I needed .NET to be available in the dev container so I could start the blog with MarkdownSnippets during development. The dev container image I use, [devcontainers/typescript-node](https://hub.docker.com/r/microsoft/devcontainers-typescript-node), only includes Node.js as a runtime, and nothing related to .NET is included.
 
-Since the main purpose of this dev container is to build and run the website, I didn't want to change the image so I made use of dev container [features](https://containers.dev/features) to include the .NET SDK and CLI by adding this to the `devcontainer.json`:
+Since the main purpose of this dev container is to build and run the website, I didn't want to change the image so I made use of dev container [features](https://containers.dev/features) to add the .NET SDK and CLI to the dev container by adding this to `devcontainer.json`:
 
 ```json
 	"features": {
 		"ghcr.io/devcontainers/features/dotnet:2": {
 			"version": "10.0",
-			"dotnetRuntimeVersions": "10.0"
 		}
 	}
 ```
 
+So now a `dotnet --version` in the dev container terminal returns the latest version of the .NET 10 LTS SDK upon build of the dev container:
+
+![Screenshot showing a terminal with the command dotnet version and its output of 10.0.403](dotnet-version-terminal.png)
+
+Now I can start adding MarkdownSnippets itself!
+
 ### To the Blog
 
-In order to convert the snippets - well, it's really more of a placeholder substitution - the .NET tool has to be run before the site is built.
+In order to convert the snippets - well, it's really more of a placeholder substitution - the MarkdownSnippets .NET tool has to be run before the site is built.
 
 .NET tools are defined in a `dotnet-tools.json` manifest like so:
 
@@ -100,19 +105,38 @@ In order to convert the snippets - well, it's really more of a placeholder subst
 }
 ```
 
-snippet: Program.cs
+With this added, I can run `dotnet tool restore` in the terminal to make sure that MarkdownSnippets is installed and available:
 
-As mentioned above, the configuration for MarkdownSnippets is contained in a `mdsnippets.json` file.
+![Screenshot showing the terminal with the command dotnet tool restore and its succesful output](dotnet-tool-restore-terminal.png)
 
-That can be done with a simple `dotnet tool mdnsippets`.
+As mentioned above, the configuration for MarkdownSnippets is contained in a `mdsnippets.json` file. Before I can run the tool, I need to add this configuration. It took me a few runs to finalize, but this is what I settled on:
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/SimonCropp/MarkdownSnippets/master/schema.json",
+  "LinkFormat": "GitHub",
+  "Convention": "InPlaceOverwrite"
+}
+```
+
+These options mean:
+
+- `LinkFormat`:
+- `Convention`: 
+
+Now how do we make MarkdownSnippets process all of these `snippet` keywords? That can be done by simply running `dotnet tool mdnsippets`. `mdsnippets` then runs through and makes all of the substitutions:
 
 Here is the same example class as above, included as an entire file:
 
 snippet: MyClass.cs
 
+:::tip
+I prefer not to commit the MarkdownSnippets output to Git, since the HTML output from MarkdownSnippets completely replaces the `snippet` code and has to be manually reverted if you want to re-generate the snippet (for example after changing it).
+:::
+
 ### To GitHub Actions
 
-Since the GitHub Action for building and deploying this site was only designed for building the Astro site, I had to add .NET to the mix in order for the Markdown snippets to actually be transformed during the website build.
+Since the GitHub Action for building and deploying this site was only designed for building the Astro site (similar to the dev container image), I had to add .NET to the mix in order for the Markdown snippets to actually be transformed during the website build.
 
 ## Resources
 
