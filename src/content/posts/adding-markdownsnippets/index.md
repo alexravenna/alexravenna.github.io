@@ -55,6 +55,8 @@ Console.WriteLine("Hello, Again!");
 // end-snippet
 ```
 
+Depending on the configuration, MarkdownSnippets also adds links to the snippet source, even if it's hosted remotely on GitHub.
+
 Note: I couldn't find a way to exclude individual `snippet`s from being substituted, which makes it a bit difficult to describe them without them being processed by the tool!
 
 The behavior of MarkdownSnippets is configured through a `mdsnippets.json` file; see mine here: [mdsnippets.json](https://github.com/alexravenna/alexravenna.github.io/blob/main/mdsnippets.json). At its most basic configuration, MarkdownSnippets scans all files (with some default [exclusions](https://github.com/SimonCropp/MarkdownSnippets/blob/main/docs/exclusion.md)) for these comments and substitutes the content them into any Markdown or MDX file that contains the same key.
