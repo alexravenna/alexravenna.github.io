@@ -126,7 +126,11 @@ These options mean:
 
 Now how do we make MarkdownSnippets process all of these `snippet` keywords? That can be done by simply running `dotnet tool mdnsippets`. `mdsnippets` then runs through and makes all of the substitutions:
 
-Here is the same example class as above, included as an entire file:
+Here is a snippet taken out of an example file:
+
+snippet: TestSnippetKey
+
+Here is the same example class as earlier in this post, included as an entire file:
 
 snippet: MyClass.cs
 
