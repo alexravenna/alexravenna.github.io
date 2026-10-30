@@ -5,7 +5,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev --host 0.0.0.0 --port 4321",
+    "tool-restore": "dotnet tool restore",
+    "mdsnippets": "dotnet mdsnippets",
     "build": "astro build",
+    "build-snippets": "npm run mdsnippets && npm run build",
     "postbuild": "pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
