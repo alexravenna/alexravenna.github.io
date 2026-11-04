@@ -55,9 +55,9 @@
     "@types/markdown-it": "^14.2.0",
     "@types/sanitize-html": "^2.16.2",
     "pagefind": "^1.5.2",
-    "prettier": "3.9.9",
-    "prettier-plugin-astro": "1.1.0",
-    "sass-embedded": "^1.105.1",
+    "prettier": "3.9.10",
+    "prettier-plugin-astro": "1.1.2",
+    "sass-embedded": "^1.107.1",
     "typescript": "^7.0.2"
   }
 }
