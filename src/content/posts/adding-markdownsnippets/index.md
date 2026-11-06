@@ -93,21 +93,9 @@ In order to convert the snippets - well, it's really more of a placeholder subst
 
 .NET tools are defined in a `dotnet-tools.json` manifest like so:
 
-```json
-{
-  "version": 1,
-  "isRoot": true,
-  "tools": {
-    "markdownsnippets.tool": {
-      "version": "28.5.1",
-      "commands": [
-        "mdsnippets"
-      ],
-      "rollForward": false
-    }
-  }
-}
-```
+snippet: dotnet-tools.json
+
+(Did you notice that I included the `dotnet-tools.json` file here as a MarkdownSnippet? :wink:)
 
 With this added, I can run `dotnet tool restore` in the terminal to make sure that MarkdownSnippets is installed and available:
 
@@ -137,6 +125,21 @@ snippet: TestSnippetKey
 Here is the same example class as earlier in this post, included as an entire file:
 
 snippet: MyClass.cs
+
+For comparison again:
+
+```csharp
+namespace MyNamespace;
+
+public class MyClass {
+    public string Name => _name;
+    private readonly string _name;
+
+    public MyClass(string name) {
+        _name = name;
+    }
+}
+```
 
 :::tip
 I prefer not to commit the MarkdownSnippets output to Git, since the HTML output from MarkdownSnippets completely replaces the `snippet` code and has to be manually reverted if you want to re-generate the snippet (for example after changing it).
