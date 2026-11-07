@@ -187,7 +187,16 @@ snippet: global.json
 `dotnet` is included in the default GitHub Actions runner, but I wanted to enforce which version is used and not implicitly use the one from the runner.
 :::
 
-Essentially, the snippets are only transformed upon building the website; while writing I don't see the generated snippets unless I run `mdsnippets` - but then I have to undo the changes because I don't like to commit them. A different possibility to avoid that would've been to use the [SourceTransform method](https://github.com/SimonCropp/MarkdownSnippets/blob/main/readme.md#document-convention), but that was a bit more complicated, so I stuck with `InPlaceOverwrite`.
+In order to keep the changes to the rest of the codebase at a minimum, I decided to integrate `mdsnippets` into the existing build step by adding a new npm script `mdsnippets` for only transforming the snippets and then adding that script to the already existing `build` script:
+
+```json
+    "mdsnippets": "dotnet tool restore && dotnet mdsnippets",
+    "build": "npm run mdsnippets && astro build",
+```
+
+Essentially, the snippets are only transformed upon building the website with `npm run build`. While writing I don't see the generated snippets unless I run `npm run mdsnippets` - but then I have to undo the changes because I don't like to commit them. A different possibility to avoid that would've been to use the [SourceTransform method](https://github.com/SimonCropp/MarkdownSnippets/blob/main/readme.md#document-convention), but that was a bit more complicated, so I stuck with `InPlaceOverwrite`.
+
+And that's it! Whenever I define a snippet and use its key in a Markdown or MDX file, that file will automatically be transformed during the build of this website.
 
 ## Conclusion
 
