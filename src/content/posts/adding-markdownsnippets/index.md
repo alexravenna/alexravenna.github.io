@@ -194,6 +194,8 @@ Essentially, the snippets are only transformed upon building the website; while 
 
 It took a little bit of work, but I am incredibly happy to have added this tool to this blog and to my own toolbox!
 
+Enjoy the snippets :smile:.
+
 ## Resources
 
 - [MarkdownSnippets GitHub repo](https://github.com/SimonCropp/MarkdownSnippets)
