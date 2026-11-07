@@ -41,13 +41,11 @@ As I work with .NET technologies (that is, mostly C# and associated frameworks) 
 
 Simon Cropp is a prolific author of tools in the .NET scene, just see his [GitHub profile](https://github.com/SimonCropp). He's also mentioned regularly in the segment "Better Know a Framework" on the [Dotnet Rocks podcast](https://www.dotnetrocks.com), one of my favorite podcasts about .NET and software development in general.
 
-MarkdownSnippets works by replacing lines like
+MarkdownSnippets works by replacing lines in Markdown files like
 
-```
-snippet: ExampleSnippetKey
-```
+![Screenshot of the text "snippet: TestSnippetKey"](testsnippetkey-text.png)
 
-in Markdown (.md) files with the content of that snippet, which is marked with the following `begin-snippet` and `end-snippet` comments:
+with the content of that snippet, which is marked with the following `begin-snippet` and `end-snippet` comments:
 
 ```
 // begin-snippet: TestSnippetKey
@@ -58,16 +56,16 @@ Console.WriteLine("Hello, Again!");
 Depending on the configuration, MarkdownSnippets also adds links to the snippet source, even if it's hosted remotely on GitHub.
 
 :::note
-I couldn't find a way to exclude individual `snippet`s from being substituted, which makes it a bit difficult to describe them without them being processed by the tool!
+I couldn't find a way to exclude individual `snippet`s from being substituted, which makes it a bit difficult to describe them without them being processed by the tool! See [below](#caveat-missing-snippets) for my failed attempt at a workaround.
 :::
 
 The behavior of MarkdownSnippets is configured through a `mdsnippets.json` file; see mine here: [mdsnippets.json](https://github.com/alexravenna/alexravenna.github.io/blob/main/mdsnippets.json). At its most basic configuration, MarkdownSnippets scans all files (with some default [exclusions](https://github.com/SimonCropp/MarkdownSnippets/blob/main/docs/exclusion.md)) for these comments and substitutes the content them into any Markdown or MDX file that contains the same key.
 
-## Adding Markdown Snippets
+## Adding MarkdownSnippets
 
-### Enabling Development
+### Enabling During Development
 
-I typically edit this blog in a [dev container](link) so that I don't need to have Node.js and a package manager (npm/pnpm/yarn) always installed on whichever machine I'm currently on - or maybe I'm even using a [Codespace](link), which use can use dev container configurations out-of-the-box!
+I typically edit this blog in a [dev container](https://containers.dev) so that I don't need to have Node.js and a package manager (npm/pnpm/yarn) always installed on whichever machine I'm currently on - or maybe I'm even using a [Codespace](https://github.com/features/codespaces), which use can use dev container configurations out-of-the-box!
 
 Anyway, that means I needed .NET to be available in the dev container so I could start the blog with MarkdownSnippets during development. The dev container image I use, [devcontainers/typescript-node](https://hub.docker.com/r/microsoft/devcontainers-typescript-node), only includes Node.js as a runtime, and nothing related to .NET is included.
 
@@ -87,7 +85,7 @@ So now a `dotnet --version` in the dev container terminal returns the latest ver
 
 Now I can start adding MarkdownSnippets itself!
 
-### To the Blog
+### Enabling in the Blog
 
 In order to convert the snippets - well, it's really more of a placeholder substitution - the MarkdownSnippets .NET tool has to be run before the site is built.
 
@@ -163,11 +161,21 @@ So it finished processing but *also* replaced the missing key in this file with
 
 That's not what I wanted, so I had to replace the missing snippet key in this article with an image to prevent it from being transformed.
 
-### To GitHub Actions
+### Enabling in GitHub Actions
 
 Since the GitHub Action for building and deploying this site was only designed for building the Astro site (similar to the dev container image), I had to add .NET to the mix in order for the Markdown snippets to actually be transformed during the website build.
 
+I accomplished this with an additional step in the [GitHub Actions definition](https://github.com/alexravenna/alexravenna.github.io/blob/main/.github/workflows/astro.yml):
+
+```yaml
+- uses: actions/setup-dotnet@v6
+  with:
+    global-json-file: global.json
+```
+
 Essentially, the snippets are only transformed upon building the website; while writing I don't see the generated snippets unless I run `mdsnippets` - but then I have to undo the changes because I don't like to commit them. A different possibility to avoid that would've been to use the [SourceTransform method](https://github.com/SimonCropp/MarkdownSnippets/blob/main/readme.md#document-convention), but that was a bit more complicated, so I stuck with `InPlaceOverwrite`.
+
+## Conclusion
 
 ## Resources
 
