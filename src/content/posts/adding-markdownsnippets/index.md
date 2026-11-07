@@ -58,7 +58,7 @@ Console.WriteLine("Hello, Again!");
 Depending on the configuration, MarkdownSnippets also adds links to the snippet source, even if it's hosted remotely on GitHub.
 
 :::note
-Note: I couldn't find a way to exclude individual `snippet`s from being substituted, which makes it a bit difficult to describe them without them being processed by the tool!
+I couldn't find a way to exclude individual `snippet`s from being substituted, which makes it a bit difficult to describe them without them being processed by the tool!
 :::
 
 The behavior of MarkdownSnippets is configured through a `mdsnippets.json` file; see mine here: [mdsnippets.json](https://github.com/alexravenna/alexravenna.github.io/blob/main/mdsnippets.json). At its most basic configuration, MarkdownSnippets scans all files (with some default [exclusions](https://github.com/SimonCropp/MarkdownSnippets/blob/main/docs/exclusion.md)) for these comments and substitutes the content them into any Markdown or MDX file that contains the same key.
@@ -145,9 +145,29 @@ public class MyClass {
 I prefer not to commit the MarkdownSnippets output to Git, since the HTML output from MarkdownSnippets completely replaces the `snippet` code and has to be manually reverted if you want to re-generate the snippet (for example after changing it).
 :::
 
+#### Caveat: Missing Snippets
+
+I got stuck for a long time wondering why `mdsnippets` didn't generate anything until I discovered the setting `TreatMissingAsWarning`. The tool was throwing a warning that a snippet key was included that was never defined: `ExampleSnippetKey` from the beginning of this article. 
+
+![Screenshot of a terminal with the failed output of MarkdownSnippets](mdsnippets-failed-terminal.png)
+
+I thought it was just warning me here and should continue transforming, but I was wrong. After much frustration I realized that the tool was actually *failing* and therefore not generating anything. Maybe I should have paid more attention to the word "**Failed**" in the output message :sweat_smile:.
+
+Adding the setting `"TreatMissingAsWarning": true` to `mdsnippets.json` changed that output to:
+
+![Screenshot of a terminal with a warning output of MarkdownSnippets](mdsnippets-warning-terminal.png)
+
+So it finished processing but *also* replaced the missing key in this file with
+
+![Screenshot of commented text stating that the snippet ExampleSnippetKey could not be found](examplesnippetkey-not-found.png)
+
+That's not what I wanted, so I had to replace the missing snippet key in this article with an image to prevent it from being transformed.
+
 ### To GitHub Actions
 
 Since the GitHub Action for building and deploying this site was only designed for building the Astro site (similar to the dev container image), I had to add .NET to the mix in order for the Markdown snippets to actually be transformed during the website build.
+
+Essentially, the snippets are only transformed upon building the website; while writing I don't see the generated snippets unless I run `mdsnippets` - but then I have to undo the changes because I don't like to commit them. A different possibility to avoid that would've been to use the [SourceTransform method](https://github.com/SimonCropp/MarkdownSnippets/blob/main/readme.md#document-convention), but that was a bit more complicated, so I stuck with `InPlaceOverwrite`.
 
 ## Resources
 
