@@ -1,0 +1,8 @@
+{
+  "$schema": "https://raw.githubusercontent.com/SimonCropp/MarkdownSnippets/master/schema.json",
+  "Convention": "InPlaceOverwrite",
+  "WriteHeader": false,
+  "ReadOnly": false,
+  "LinkFormat": "GitHub",
+  "UrlPrefix": "https://github.com/alexravenna/alexravenna.github.io/blob/main"
+}
