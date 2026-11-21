@@ -1,17 +1,18 @@
 ---
-title: 'Adding an IKEA Matter button to Home Assistant'
-published: 2026-09-26
+title: 'Adding an IKEA Matter button to Home Assistant (Part 1)'
+series: 'First Matter Device'
+published: 2026-11-21
 draft: true
-description: 'How I added my first Matter device.'
-tags: ['ikea', 'smart-home', 'home-assistant', 'matter', 'zigbee']
+description: 'How I tried to add my first Matter device to Home Assistant.'
+tags: ['ikea', 'smart-home', 'home-assistant', 'matter', 'zigbee', 'amazon']
 ---
 
 I have many smart devices in my household, and essentially all of them run on Zigbee - either through a Philips Hue hub, through Home Assistant, 
-or through no hub at all - like some IKEA transformers that are only connected to their respective remotes.
+or through no hub at all, like some IKEA transformers that are only connected to their respective remotes.
 
 That was about to change!
 
-A Zigbee button for some of the lights in my kitchen stop working abruptly recently. I tried resetting it and re-connecting it to the respective 
+A Zigbee button from IKEA for some of the lights in my kitchen stop working abruptly recently. I tried resetting it and re-connecting it to the respective 
 [Trådfri transformer](https://www.ikea.com/de/de/p/tradfri-treiber-fuer-kabellose-steuerung-smart-grau-50356187/) multiple times, as well as replacing the
 battery but nothing worked. Since I knew that IKEA had just brought out a new line of Matter smart home devices instead of Zigbee devices, I thought this 
 might be the chance to try out Matter for the first time.
@@ -44,7 +45,7 @@ I went into the Home Assistant app, Settings -> Connectivity -> Matter -> Add de
 3. Be notified that "Your device requires a Thread border router".
 4. What?!
 
-But wait, I don't *have* a Thread border router, and I thought I didn't need one! Actually, I was wrong about the first part - I do have one!. I looked in the Thread settings in Home Assistant (Settings -> Connectivity -> Thread) and was surprised to find this:
+But wait, I don't *have* a Thread border router, and I thought I didn't need one! Actually, I was wrong about the first part - I do have one! I looked in the Thread settings in Home Assistant (Settings -> Connectivity -> Thread) and was surprised to find this:
 
 ![alt text](ha-thread-settings-amazon-border-router.png)
 
@@ -70,6 +71,10 @@ The process was as follows:
 But the whole reason I've been setting up Home Assistant in the first place is so that I don't have to use multiple different apps from different vendors for managing my smart home. So the question is still: how do I add this button to Home Assistant?
 
 ### Adding the Button to Home Assistant
+
+The Home Assistant documentation on [Matter](https://www.home-assistant.io/integrations/matter/) and [Thread](https://www.home-assistant.io/integrations/thread/) is unfortunately very geared toward using Apple HomeKit, Google Home, Home Assistant or other hardware and makes no meaningful mention of using Amazon devices as Thread border routers.
+
+That means it was up to forum posts like [this](https://community.home-assistant.io/t/using-thread-border-router-of-echo-show-15-for-ha/925029/2) or Reddit posts for information on how to share the button from A
 
 ## Resources
 
