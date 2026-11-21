@@ -76,7 +76,7 @@ But the whole reason I've been setting up Home Assistant in the first place is s
 
 The Home Assistant documentation on [Matter](https://www.home-assistant.io/integrations/matter/) and [Thread](https://www.home-assistant.io/integrations/thread/) is unfortunately very geared toward using Apple HomeKit, Google Home, Home Assistant or other hardware and makes no meaningful mention of using Amazon devices as Thread border routers.
 
-That means it was up to forum posts like [this](https://community.home-assistant.io/t/using-thread-border-router-of-echo-show-15-for-ha/925029/2) or Reddit posts for information on how to share the button from the Amazon Thread mesh to Home Assistant.
+That means it was up to forum posts like [this](https://community.home-assistant.io/t/thread-connection-border-router-alexa-echo-4/770615), [this](https://community.home-assistant.io/t/using-thread-border-router-of-echo-show-15-for-ha/925029/2) or Reddit posts for information on how to share the button from the Amazon Thread mesh to Home Assistant.
 
 I did actually manage to add the button to Home Assistant so it showed up in the Matter and Thread pages. From there I was able to set up a simple automation connecting the buttons of the remote to turning my light in the kitchen on and off. Hurray!
 
@@ -103,5 +103,7 @@ Was I ever successful? I'll let you know in part two.
 - [Reddit thread about the Bilresa button and Zigbee](https://www.reddit.com/r/homeassistant/comments/1sc325n/zigbee_support_for_the_ikea_bilresa/)
 
 - [Zigbee2MQTT page for the Bilresa button](https://www.zigbee2mqtt.io/devices/E2489.html)
+
+- [Home Assistant forum post: "Thread Connection Border Router Alexa Echo 4" ](https://community.home-assistant.io/t/thread-connection-border-router-alexa-echo-4/770615)
 
 - [Home Assistant forum post: "Using Thread Border Router of Echo Show 15 for HA?"](https://community.home-assistant.io/t/using-thread-border-router-of-echo-show-15-for-ha/925029)
